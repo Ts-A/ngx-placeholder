@@ -6,17 +6,24 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
   standalone: true,
   imports: [NgStyle],
   templateUrl: './ngx-placeholder.component.html',
-  styles: ``,
+  styles: [
+    `
+      :host {
+        display: inline-flex;
+      }
+    `,
+  ],
 })
 export class NgxPlaceholderComponent implements OnInit {
   @Input() public width: number = 300;
   @Input() public height: number = 200;
+  @Input() public border: number = 1;
   public placeholderStyle: any | undefined;
 
   ngOnInit() {
     this.placeholderStyle = {
-      width: `${this.width}px`,
-      height: `${this.height}px`,
+      width: `${this.width - 2 * this.border}px`,
+      height: `${this.height - 2 * this.border}px`,
       border: `1px solid black`,
     };
   }
