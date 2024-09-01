@@ -1,14 +1,23 @@
-import { Component, Input } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-placeholder',
   standalone: true,
-  imports: [],
+  imports: [NgStyle],
   templateUrl: './ngx-placeholder.component.html',
   styles: ``,
 })
-export class NgxPlaceholderComponent {
-  @Input() width: number = 300;
-  @Input() height: number = 200;
-  @Input() text: string = '';
+export class NgxPlaceholderComponent implements OnInit {
+  @Input() public width: number = 300;
+  @Input() public height: number = 200;
+  public placeholderStyle: any | undefined;
+
+  ngOnInit() {
+    this.placeholderStyle = {
+      width: `${this.width}px`,
+      height: `${this.height}px`,
+      border: `1px solid black`,
+    };
+  }
 }
