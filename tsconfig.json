@@ -11,6 +11,11 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "paths": {
+      "ngx-placeholder": [
+        "./dist/ngx-placeholder"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
