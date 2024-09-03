@@ -1,6 +1,7 @@
 {
   "name": "ngx-placeholder",
   "version": "0.0.1",
+  "description": "Angular package to use customisable placeholders in your projects.",
   "peerDependencies": {
     "@angular/common": "^18.2.0",
     "@angular/core": "^18.2.0"
@@ -8,5 +9,29 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "angular",
+    "ng",
+    "ngx-placeholder",
+    "ngx",
+    "placeholder",
+    "place",
+    "image",
+    "customisable placeholder"
+  ],
+  "homepage": "https://github.com/Ts-A/ngx-placeholder",
+  "bugs": {
+    "url": "https://github.com/Ts-A/ngx-placeholder/issues",
+    "email": "tsajeet.cpp@gmail.com"
+  },
+  "author": {
+    "name": "Ajeet T S",
+    "email": "tsajeet.cpp@gmail.com",
+    "url": "https://ajeet-portfolio.vercel.app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ts-A/ngx-placeholder"
+  }
 }
