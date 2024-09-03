@@ -1,1 +1,8 @@
-<div [ngStyle]="placeholderStyle"></div>
+<div *ngIf="type === 'box'" [ngStyle]="placeholderStyle"></div>
+<div *ngIf="type === 'text'" [ngStyle]="placeholderStyle"></div>
+<img
+  *ngIf="type === 'image'"
+  [ngStyle]="placeholderStyle"
+  src="/assets/image_placeholder.svg"
+  alt="placeholder"
+/>

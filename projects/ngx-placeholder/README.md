@@ -1,6 +1,6 @@
 # ngx-placeholder
 
-Angular package to use rectangular placeholders when required.
+Angular package to use customisable placeholders when required.
 
 ## To use
 
