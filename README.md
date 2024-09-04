@@ -12,15 +12,18 @@ npm i ngx-placeholder
 
 Go to `angular.json` of your project
 
-```json
- assets: [
-        // other asset imports
-            {
-                "glob": "**/*",
-                "input": "./node_modules/ngx-placeholder/assets",
-                "output": "./assets"
-            },
-        ]
+```js
+{
+  // ...
+  assets: [
+    // ...
+    {
+      glob: "**/*",
+      input: "./node_modules/ngx-placeholder/assets",
+      output: "./assets",
+    },
+  ];
+}
 ```
 
 > This is required to access the placeholder image when you use placeholder with type image
