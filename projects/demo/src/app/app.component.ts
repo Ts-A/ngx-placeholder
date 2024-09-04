@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { RouterOutlet } from '@angular/router';
-import { NgxPlaceholderComponent } from 'ngx-placeholder';
+import { NgxPlaceholderComponent, NgxPlaceholderModule } from 'ngx-placeholder';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgxPlaceholderComponent, MatGridTile, MatGridList],
+  imports: [RouterOutlet, NgxPlaceholderModule, MatGridTile, MatGridList],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
