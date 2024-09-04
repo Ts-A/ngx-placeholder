@@ -28,6 +28,20 @@ npm i ngx-placeholder
 
 > This is required to access the placeholder image when you use placeholder with type image
 
+- Import the module / component
+
+```ts
+@Component({
+  // ...
+  imports: [
+  // ...
+    NgxPlaceholderModule
+  // ...
+    ],
+  // ...
+})
+```
+
 ```html
 <!-- Placeholder with box option -->
 <ngx-placeholder width="200" height="100"></ngx-placeholder>

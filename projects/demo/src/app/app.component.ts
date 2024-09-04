@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatGridList, MatGridTile } from '@angular/material/grid-list';
 import { RouterOutlet } from '@angular/router';
-import { NgxPlaceholderComponent, NgxPlaceholderModule } from 'ngx-placeholder';
+import { NgxPlaceholderModule } from 'ngx-placeholder';
 
 @Component({
   selector: 'app-root',
