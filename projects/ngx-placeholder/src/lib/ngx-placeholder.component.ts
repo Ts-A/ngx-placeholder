@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-placeholder',
@@ -9,23 +9,35 @@ import { Component, Input, OnInit } from '@angular/core';
   styles: [
     `
       :host {
-        display: inline-flex;
+        display: contents;
       }
     `,
   ],
 })
-export class NgxPlaceholderComponent implements OnInit {
-  @Input() public width: number = 300;
-  @Input() public height: number = 200;
-  @Input() public border: number = 1;
+export class NgxPlaceholderComponent implements OnInit, OnDestroy {
+  @Input() public width: string = '100%';
+  @Input() public height: string = '100%';
+  @Input() public border: string = '1px';
   @Input() public type: 'box' | 'image' | 'text' = 'box';
+  @Input() phrase: string = 'P';
   public placeholderStyle: any | undefined;
 
   ngOnInit() {
     this.placeholderStyle = {
-      width: `${this.width - 2 * this.border}px`,
-      height: `${this.height - 2 * this.border}px`,
-      border: `1px solid black`,
+      width: `calc(${this.width} - 2 * ${this.border})`,
+      height: `calc(${this.height} - 2 * ${this.border})`,
+      border: `${this.border} solid black`,
+      backgroundColor: '#dddddd',
+      margin: '0px',
     };
+    if (this.type === 'text') {
+      this.placeholderStyle.display = 'flex';
+      this.placeholderStyle['align-items'] = 'center';
+      this.placeholderStyle['justify-content'] = 'center';
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.placeholderStyle = undefined;
   }
 }

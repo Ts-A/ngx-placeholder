@@ -1,5 +1,5 @@
 <div *ngIf="type === 'box'" [ngStyle]="placeholderStyle"></div>
-<div *ngIf="type === 'text'" [ngStyle]="placeholderStyle"></div>
+<div *ngIf="type === 'text'" [ngStyle]="placeholderStyle">{{ phrase }}</div>
 <img
   *ngIf="type === 'image'"
   [ngStyle]="placeholderStyle"

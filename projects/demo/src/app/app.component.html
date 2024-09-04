@@ -1,8 +1,29 @@
 <div>
-  <span>Angular Placeholder Wrapper</span>
-
-  <ngx-placeholder></ngx-placeholder>
-  <ngx-placeholder [width]="200"></ngx-placeholder>
-  <ngx-placeholder [height]="100"></ngx-placeholder>
-  <ngx-placeholder type="image" [width]="300" [height]="300"></ngx-placeholder>
+  <ngx-placeholder
+    type="text"
+    width="100%"
+    height="150px"
+    phrase="ngx-placeholder"
+  ></ngx-placeholder>
+</div>
+<main class="main">
+  <mat-grid-list cols="3">
+    <mat-grid-tile colspan="2">
+      <ngx-placeholder type="text" phrase="text"></ngx-placeholder>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <ngx-placeholder type="image" width="100%"></ngx-placeholder>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <ngx-placeholder type="box" width="100%"></ngx-placeholder>
+    </mat-grid-tile>
+  </mat-grid-list>
+</main>
+<div>
+  <ngx-placeholder
+    type="text"
+    width="100%"
+    height="50px"
+    phrase="Made with ❤️ by Ajeet"
+  ></ngx-placeholder>
 </div>
